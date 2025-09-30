@@ -1,0 +1,12 @@
+server {
+    listen ${PORT};
+    server_name localhost;
+
+    root /usr/share/nginx/html;
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+}
+# Note: Ensure that the PORT environment variable is set to 8080 in your deployment environment.
